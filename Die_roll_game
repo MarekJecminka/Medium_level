@@ -1,1 +1,21 @@
-import 
+import random
+
+def roll():
+    roll = random.randint(1,6)
+
+while True:
+    players = input('input number of players between 2 and 4 included: ')
+    if players.isdigit():
+        if 2 <= players <= 4:
+            players = int(players)
+            break
+        else:
+            print('Write number between 2 and 4 included.')
+    else:
+        print('Write a number next time.')
+
+score_limit = 50
+max_score = [0 for i in players]
+
+while max_score <= score_limit:
+    
