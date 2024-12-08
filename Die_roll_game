@@ -18,4 +18,8 @@ score_limit = 50
 max_score = [0 for i in players]
 
 while max_score <= score_limit:
+    for player_idx in players:
+        print('Player #, player_idx + 1, just started')
+        should_roll = input('Are you going to roll? ').lower()
+        if should_roll = 'yes':
     
