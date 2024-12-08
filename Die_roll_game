@@ -2,6 +2,7 @@ import random
 
 def roll():
     roll = random.randint(1,6)
+    return roll
 
 while True:
     players = input('input number of players between 2 and 4 included: ')
@@ -15,11 +16,23 @@ while True:
         print('Write a number next time.')
 
 score_limit = 50
-max_score = [0 for i in players]
+current_score = [0 for i in range(players)]
 
-while max_score <= score_limit:
-    for player_idx in players:
+while max(current_score) <= score_limit:
+    for player_idx in range(players):
         print('Player #, player_idx + 1, just started')
-        should_roll = input('Are you going to roll? ').lower()
-        if should_roll = 'yes':
+        current_score = 0
+
+        while True:
+            should_roll = input('Are you going to roll? ').lower()
+            if should_roll != yes:
+                break
+
+            value = roll()
+            if value == 1:
+                current_score = 0
+
+            else:
+                current_score += value
+    
     
